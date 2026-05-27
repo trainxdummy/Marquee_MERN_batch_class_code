@@ -1,0 +1,26 @@
+.container{
+    background-color: green;
+    height: 30vh;
+    width: 50%;
+    position: relative;
+}
+
+
+.icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 30px;
+    height: 30px;
+    background-color: white;
+
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

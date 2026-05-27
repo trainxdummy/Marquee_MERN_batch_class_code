@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+  height: 200vh;
+}
+
+
+.box-container{
+    height: 100vh;
+    background-color: beige; 
+
+    /* position: relative; */
+
+}
+
+.box{
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border: 2px solid white;
+
+    border-radius: 10px;
+    padding: 4px;
+
+}
+
+.page2{
+    background-color: rgb(31, 31, 31);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.page2 h1{
+    font-size: 100px;
+    font-weight: 900;
+}
+
+#box2{
+    position: fixed;
+    top: 0px;
+    left: 200px;
+}
+
+#box1{
+    position: sticky;
+    top: 0px;
+}
+

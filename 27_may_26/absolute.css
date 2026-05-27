@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 200vh;
+}
+
+.box-container{
+    background-color: beige;
+    height: 30vh;
+    padding: 4px;
+
+    position: relative;
+}
+
+.box{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    color: white;
+    padding: 2px;
+    margin: 4px;
+}
+
+#box1{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+}
