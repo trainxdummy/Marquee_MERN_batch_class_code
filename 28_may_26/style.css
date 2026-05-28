@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.main{
+    background-color: rgba(177, 177, 177, 0.881);
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container{
+    background-color: white;
+    padding: 10px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.image-div{
+    background-color: green;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.content{
+    margin-top: 90px;
+}
+
+.content h1{
+    padding: 6px 0px;
+    margin: 10px 0px;
+    font-size: 30px;
+
+}
+
+.content span{
+    display: block;
+    padding: 6px 0px;
+    font-size: 24px;
+    font-weight: 600;
+    color: green;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 10px;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.sale-badge{
+    background-color: red;
+    color: white;
+    padding : 4px 8px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 20px;
+    left : 20px;
+}
+
+.heart-badge{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    padding : 4px 8px;
+    border-radius: 50%;
+    font-size: 20px;
+
+    position: absolute;
+    top: 20px;
+    right : 20px;
+    
+}
+
