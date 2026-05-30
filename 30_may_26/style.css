@@ -1,0 +1,37 @@
+
+.main{
+    background-color: beige;
+    height: 30vh;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+
+    flex-grow: 1;
+    flex-basis: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#box2{
+    background-color: rgb(252, 64, 64);
+    /* flex-grow: 2; */
+}
+
+#box3{
+    background-color: greenyellow;
+    /* flex-shrink: 2; */
+}
