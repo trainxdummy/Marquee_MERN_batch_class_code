@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.main-container{
+    background-color: white;
+    height: 300vh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+
+    /* border: 1px solid blue; */
+}
+
+.navbar-container{
+    padding: 10px 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.right-nav-content {
+    text-decoration: none;
+    display: flex;
+    gap:10px;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.right-nav-content span {
+   color: blue;
+}
+
+.left-nav-content{
+    display: flex;
+    gap: 10px;
+}
+
+.flipkart-btn{
+    background-color: #FFE51F;
+    padding: 16px 30px;
+    border-radius: 10px;
+    color: black;
+    font-size: small;
+    font-weight: 600;
+}
+.travel-btn{
+    background-color: #F0F0F0;
+    padding: 16px 30px;
+    border-radius: 10px;
+    color: black;
+    font-size: small;
+    font-weight: 600;
+}
