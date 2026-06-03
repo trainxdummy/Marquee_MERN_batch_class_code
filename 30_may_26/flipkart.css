@@ -15,21 +15,25 @@
 .container{
     max-width: 1200px;
     margin: auto;
+    position: relative;
 
     /* border: 1px solid blue; */
 }
 
 .navbar-container{
-    padding: 10px 14px;
+    padding: 10px 0px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    width: 1200px;
+
 }
 
 .right-nav-content {
     text-decoration: none;
+
     display: flex;
     gap:10px;
     font-size: 14px;
@@ -52,7 +56,21 @@
     color: black;
     font-size: small;
     font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
+
+.flipkart-btn img{
+    width: 20px;
+    height: 20px;
+}
+.travel-btn img{
+    width: 20px;
+    height: 20px;
+}
+
 .travel-btn{
     background-color: #F0F0F0;
     padding: 16px 30px;
@@ -60,4 +78,95 @@
     color: black;
     font-size: small;
     font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+hr{
+    margin: 6px 0px;
+}
+
+.searchbar-container{
+    /* background-color: red; */
+    /* border: 1px solid red; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-searchbar-content{
+    display: flex;
+    /* border: 1px solid blue; */
+    gap: 16px;
+}
+
+.searchbar-div{
+    border: 1px solid blue;
+    width: 50vw;
+    padding: 4px 12px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.fa-magnifying-glass{
+    font-size: 20px;
+    opacity: 0.8;
+
+}
+
+
+.searchbar-div input{
+    /* border: 1px solid rgb(20, 147, 243); */
+    width: 100%;
+    padding: 8px 8px;
+    font-size: 16px;
+
+    
+    outline: none;
+    border: none;
+}
+
+.main-navbar{
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.header{
+    /* width: 100%; */
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+
+    position: fixed;
+
+}
+
+.page1{
+  
+    height: 100vh;
+    padding: 10px 0px;
+}
+
+.three-cards-div{
+    margin-top: 20vh;
+    height: 30vh;
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+
+
+}
+
+.img-div img{
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
 }

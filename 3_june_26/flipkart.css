@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.main-container{
+    background-color: white;
+    height: 300vh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    /* border: 1px solid blue; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navbar-container{
+    padding: 10px 0px;
+    width: 1200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.right-nav-content {
+    text-decoration: none;
+    display: flex;
+    gap:10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.right-nav-content span {
+   color: blue;
+}
+
+.left-nav-content{
+    display: flex;
+    gap: 10px;
+}
+
+.flipkart-btn{
+    background-color: #FFE51F;
+    padding: 16px 30px;
+    border-radius: 10px;
+    color: black;
+    font-size: small;
+    font-weight: 600;
+}
+.travel-btn{
+    background-color: #F0F0F0;
+    padding: 16px 30px;
+    border-radius: 10px;
+    color: black;
+    font-size: small;
+    font-weight: 600;
+}
+
+.searchbar-container{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbar-div{
+    border: 1px solid blue;
+    width: 55vw;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.searchbar-div input{
+    /* background-color: yellow  ; */
+    width: 45vw;
+    height: 30px;
+
+    outline: none;
+    border: none;
+
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+.searchbar-right-content{
+    width: 15vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbar-div i{
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.main-navbar{
+    width: 1200px;
+
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.main-navbar-items{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-navbar-items i{
+    font-size: 20px;
+    color: rgb(68, 67, 67);
+     padding-bottom: 4px;
+
+}
+
+.three-cards-container{
+    margin-top: 25vh;
+    height: 30vh;
+    overflow: hidden;
+
+    display: flex;
+    gap: 10px;
+}
+
+.three-cards-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.header{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    padding-bottom: 10px;
+}
+
+.section3-container{
+    background-color: red;
+    height: 40vh;
+    padding: 10px 14px;
+    color: white;
+   
+    border-radius: 10px;
+     font-size: 10px;
+
+}
+
+.images-sec3 {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 30vh;
+    border-radius: 10px;
+}
+
+.images-sec3 img{
+    width: 100%;
+    height: 100%;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+.section3-container h1{
+    padding: 10px 0px;
+}
+
+.images-sec3-div{
+    /* padding: 4px 8px; */
+    background-color: rgb(247, 245, 245);
+    width: 30vw;
+    border-radius: 10px;
+}
+
+
+.section4-container{
+    background-color: rgb(255, 255, 29);
+    height: 40vh;
+    padding: 10px 14px;
+   
+    border-radius: 10px;
+     font-size: 10px;
+
+}
+
+.images-sec4 {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 30vh;
+    border-radius: 10px;
+}
+
+.images-sec4 img{
+    width: 100%;
+    height: 100%;
+    padding: 0px 40px;
+    border-radius: 10px;
+}
+
+.section4-container h1{
+    padding: 10px 0px;
+}
+
+.images-sec4-div{
+    /* padding: 4px 8px; */
+    background-color: rgb(247, 245, 245);
+    width: 30vw;
+    height: 30vh;
+    border-radius: 10px;
+}
