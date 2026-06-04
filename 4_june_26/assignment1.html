@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Layout</title>
+
+    <!-- google font link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- font-awesome cdn link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        .main-container{
+            height: 100vh;
+        }
+      
+        .navbar-container{
+            height: 50px;
+            border: 2px solid red;
+            padding: 4px 16px;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .signup-btn{
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .image-container{
+            height: 50vh;
+            background-color: rgb(254, 127, 127);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-image: url("https://images.unsplash.com/photo-1591708055112-34eecd0d086e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdhdGVyJTIwdGV4dHVyZXxlbnwwfHwwfHx8MA%3D%3D");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+
+        }
+
+        .text-container{
+            color: white;
+            text-align: center;
+            width: 30vw;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+
+        }
+
+        .searchbar-div{
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+        }
+
+        .searchbar-div input{
+            border-radius: 6px;
+            width: 80%;
+            padding: 0px 12px;
+            outline: none;
+            border: none;
+        }
+
+        .cards-container{
+            margin-top: 10vh;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .card{
+            text-align: center;
+            width: 20vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            /* background-color: blue; */
+            height: 30vh;
+            padding: 20px 10px;
+        }
+        .card i{
+            font-size: 50px;
+            color: blue;
+        }
+
+        .card p{
+            color: rgb(81, 81, 81);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar-container">
+            <div class="navbar">
+                <h4>Start Bootstrap</h4>
+                <button class="signup-btn">Sign up</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="text-container">
+                <h1>Generate more leads with a professional landing page!</h1>
+                <div class="searchbar-div">
+                    <input type="text" placeholder="Enter your email">
+                     <button class="signup-btn">Sign up</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fa-solid fa-box-archive"></i>
+                <h3>Fully Responsive</h3>
+                <p>This theme will look great on any device, no matter the size</p>
+            </div>
+            <div class="card">
+                <i class="fa-brands fa-bootstrap"></i>
+                <h3>Bootstrap5 Ready</h3>
+                <p>This theme will look great on any device, no matter the size</p>
+            </div>
+            <div class="card">
+               <i class="fa-solid fa-comments"></i>
+                <h3>Easy to use</h3>
+                <p>This theme will look great on any device, no matter the size</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
