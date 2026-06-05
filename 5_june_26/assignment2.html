@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 : Pricing Section</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container{
+            background-color: rgb(222, 222, 222);
+            height: 100vh;
+            padding: 10px;
+        }
+
+        .upper-text-container{
+            /* background-color: blue; */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .lower-card-container{
+            /* border: 2px solid red; */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+            gap: 10px;
+        }
+
+        .card{
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 25vw;
+        }
+
+        .upper-section{
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            background-color: yellow;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(229, 227, 251);
+        }
+        .upper-section h1{
+            font-size: 26px;
+            padding-top:10px ;
+        }
+        .upper-section p{
+            font-size: 16px;
+            color: rgb(62, 62, 62);
+        }
+        button{
+            background-color: blueviolet;
+            padding: 8px 16px;
+            border-radius: 10px;
+            border: none;
+
+            color: white;
+            width: 100%;
+        }
+
+        .lower-section{
+            margin-top: 20px;
+            padding: 10px;
+            color: rgb(69, 69, 69);
+
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .lower-section h2{
+            font-size: 20px;
+        }
+        .badge{
+            position:absolute;
+            top: 10px;
+            left : 40%;
+            background-color: yellow;
+            border-radius: 10px;
+            padding: 4px 8px;
+        }
+        .card2{
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="upper-text-container">
+            <h3>Pricing Plans</h3>
+            <h1>Choose the perfect plans for your needs</h1>
+        </div>
+        <div class="lower-card-container">
+            <div class="card">
+                <div class="upper-section">
+                    <h1>Lite</h1>
+                    <p>Ideal for individuals and smmall teams. Enjoy access to Ideal for individuals and smmall teams. Enjoy access to </p>
+
+                    <div>
+                        <h1>$6.99/month</h1>
+                        <p>$83.88 billed ananually</p>
+                    </div>
+
+                    <button class="plan-btn">Choose Plan</button>
+                </div>
+                <div class="lower-section">
+                        <h2>For Small projects</h2>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="upper-section">
+                    <h1>Lite</h1>
+                    <p>Ideal for individuals and smmall teams. Enjoy access to Ideal for individuals and smmall teams. Enjoy access to </p>
+
+                    <div>
+                        <h1>$6.99/month</h1>
+                        <p>$83.88 billed ananually</p>
+                    </div>
+
+                    <button class="plan-btn">Choose Plan</button>
+                    <span class="badge">Best value</span>
+                </div>
+                <div class="lower-section">
+                        <h2>For Small projects</h2>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="upper-section">
+                    <h1>Lite</h1>
+                    <p>Ideal for individuals and smmall teams. Enjoy access to Ideal for individuals and smmall teams. Enjoy access to </p>
+
+                    <div>
+                        <h1>$6.99/month</h1>
+                        <p>$83.88 billed ananually</p>
+                    </div>
+
+                    <button class="plan-btn">Choose Plan</button>
+                </div>
+                <div class="lower-section">
+                        <h2>For Small projects</h2>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                        <p>800+ design templates</p>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</body>
+</html>
