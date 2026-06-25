@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Grid assignment</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: rgb(30, 30, 30);
+        }
+
+        h1{
+            font-size: 50px;
+            font-weight: 900;
+            text-align: center;
+            color: white;
+        }
+
+        .grid-container{
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .image-div{
+            margin-top: 20px;
+            height: 50vh;
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="text-content-div">
+            <h1>Make your applets more powerful</h1>
+        </div>
+        <div class="grid-container">
+            <div class="image-div">
+                <img src="https://web-assets.ifttt.com/builds/assets/more-applets@2x-CkkP9gqI.png" alt="">
+            </div>
+            <div class="image-div">
+                <img src="https://web-assets.ifttt.com/builds/assets/multiple-actions@2x-DCoVVW2E.png" alt="">
+            </div>
+            <div class="image-div">
+                <img src="https://web-assets.ifttt.com/builds/assets/exclusive-benefits@2x-MGbw9k7E.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

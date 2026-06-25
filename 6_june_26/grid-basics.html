@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Basics</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            padding: 10px;
+            height: 100vh;
+            background-color: gainsboro;
+        }
+
+        .grid-container{
+            background-color: red;
+            padding: 10px;
+            /* height: 100%; */
+
+            display: grid;
+            /* step2 : define no. of cols & rows */
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 300px 300px 300px;
+
+            /* column-gap: 10px;
+            row-gap: 10px; */
+            grid-gap: 10px;
+
+            /* alignment properties */
+
+            /* content ---> changes alignment of the whole grid in the available grid container space */
+            justify-content: center;
+            align-content: center;
+
+            /* items -----> changes alignment inside the cells */
+            justify-items: center;
+            align-items: center;
+
+        }
+        .item{
+            background-color: rgb(12, 190, 12);
+            border: 4px solid green;
+            border-radius: 10px;
+            color: white;
+            font-size: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
