@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Basic</title>
+    <style>
+        body{
+            padding: 10px;
+        }
+
+        .box{
+            width: 100px;;
+            height: 100px;
+            background-color: orangered;
+
+            /* animation properties */
+            animation-name: slideIn;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-play-state: running;
+
+            transition: all 1s;
+        }
+
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes slideIn{
+            0%{
+                transform: scale(1);
+                transform: translateX(0px);
+                background-color: orange;
+            }
+
+            50%{
+                transform: scale(1.5);
+                transform:translateX(400px);
+                background-color: yellow;
+                border-radius: 50%;
+            }
+
+            100%{
+                transform: scale(1);
+                transform: translateX(800px);
+                background-color: red;
+            }
+        }
+
+    </style>
+</head>
+<body>
+        <div class="box"></div>
+</body>
+</html>
