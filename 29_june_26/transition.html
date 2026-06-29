@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition in HTML</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+
+            /* 
+                transition-property: background-color;
+                transition-duration: 1s; 
+                transition-timing-function: ease-in-out;
+            */
+        
+             transition: 
+                background-color 2s ease-in-out,
+                transform 2s ease-in-out;
+        }
+
+        .box:hover{
+            background-color: rgb(31, 31, 248);
+            transform: scale(2) rotate(360deg);
+        }
+
+    </style>
+</head>
+<body>
+        <div class="box"></div>
+</body>
+</html>
