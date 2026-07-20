@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>HTML layout</title>
+    </head>
+    <body>
+        <h1 id="title">DOM Manipulation</h1>
+
+        <p class="desc">description</p>
+        
+        <script>
+            let h1Div = document.querySelector("#title")
+            h1Div.innerText = "DOM Regulation"
+            
+            // h1Div.innerHTML = `<h4> ${h1Div.innerText} </h4>`
+
+            let paraEl = document.querySelector(".desc")
+            // paraEl.innerText = "<h1> Summary </h1>"
+            paraEl.innerHTML = "<h1> Summary </h1>"
+
+        </script>
+    </body>
+</html>
