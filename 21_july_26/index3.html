@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <title>style</title>
+
+    <style>
+        .container{
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>  
+        <h1 style="color : red; background-color: rgb(247, 247, 135) ">insertBefore method Demo </h1>
+
+        <div class="container">
+             <p>Description 1</p>
+             <p id="item2">Summary 2</p>
+             <p>Description 3</p>
+        </div>
+
+        <script>
+                let newParaElement = document.createElement("p")
+                newParaElement.innerText = "new Idem added successfully!"
+                newParaElement.style.backgroundColor = "orangered"
+                newParaElement.style.padding = "10px"
+                newParaElement.style.borderRadius = "10px"
+                
+                let containerDiv= document.querySelector(".container")
+                containerDiv.style.backgroundColor = "green"
+                containerDiv.style.borderRadius = "10px"
+                containerDiv.style.width = "500px"
+
+                containerDiv.appendChild(newParaElement)
+        </script>
+</body>
+</html>

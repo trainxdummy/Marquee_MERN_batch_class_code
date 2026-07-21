@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <title>createElement</title>
+</head>
+<body>  
+        <h1>insertBefore method Demo </h1>
+
+        <div class="container">
+             <p>1</p>
+             <p id="item2">2</p>
+             <p>3</p>
+        </div>
+
+        <script>
+                let newParaElement = document.createElement("p")
+                newParaElement.innerText = "new Idem added successfully!"
+                
+                let containerDiv= document.querySelector(".container")
+                containerDiv.appendChild(newParaElement)
+
+                let item2 = document.querySelector("#item2")
+                containerDiv.insertBefore(newParaElement, item2)
+
+                // can also do
+                // containerDiv.insertBefore(newParaElement, containerDiv.lastElementChild)
+        </script>
+</body>
+</html>
