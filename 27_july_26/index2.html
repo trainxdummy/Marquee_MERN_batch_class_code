@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+
+   <h1 id="main-heading"> DOM Manipulation</h1>
+
+   <script>
+        //accessing
+        let h1 = document.querySelector("#main-heading")
+        console.log(h1.innerText)
+
+        //updating the inner text 
+        h1.innerText = "Reactjs Developer"
+        console.log(h1.innerText)
+
+        //cssText
+        h1.style.cssText = "color : orangered; font-size : 65px; background-color : beige; padding : 10px"
+
+   </script>
+</body>
+</html>

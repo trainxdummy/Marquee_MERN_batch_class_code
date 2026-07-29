@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h1>CreateElement</h1>
+
+   <script>
+       /*
+          Task :
+          0. create a new <div> tag, give it class='list'
+          1. create a new <p> tag 
+          2. add some inner text inside
+          3. append <p> tag inside div with class='list'
+          4. append <div> with class='list' to the <body> tag
+       
+       */
+      let div = document.createElement("div")
+      div.className = "list"
+
+      let p = document.createElement("p")
+      p.innerText = "random text"
+
+      div.append(p)
+      let body = document.querySelector("body")
+      body.append(div)
+     
+   </script>
+</body>
+</html>

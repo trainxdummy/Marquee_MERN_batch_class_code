@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style attribute</title>
+
+    <style>
+        body{
+            background-color: beige;
+        }
+
+        .para {
+            color : red
+        }
+
+        .card{
+            background-color: white;
+            /* padding: 5px;
+            width: 300px;
+            text-align: center; */
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1 id="heading"">DOM Manipulation</h1>
+    <p class="para">Use of style attribute</p>
+
+    <div class="card">
+        <!-- Name : mohit -->
+    </div>
+
+    <script>
+
+        let paraEl = document.createElement("p")
+        paraEl.innerHTML = "<h4> Name : Nikhil </h4>"
+        paraEl.className = "para1"
+        paraEl.id = "para1"
+        
+        let paraEl2 = document.createElement("p")
+        paraEl2.innerHTML = "<h4> Location : Vadodara </h4>"
+        paraEl2.className = "para2"
+        paraEl2.id = "para2"
+        paraEl2.style.cssText += "margin : 20px 0px; background-color : blue; color : white"
+
+        let card = document.querySelector(".card")
+
+        //option
+        card.style.cssText += "color : blue; padding : 4px; width : 300px; text-align : center;"
+
+        card.append(paraEl)
+        card.append(paraEl2)
+    </script>
+</body>
+</html>

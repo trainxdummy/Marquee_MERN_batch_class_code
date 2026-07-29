@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        h1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">DOM Manipulation</h1>
+    <h4>recapping all DOM properties covered so far</h4>
+
+    <p class="desc">here goes the description of each topic</p>
+
+    <div class="todo-card">
+        <!-- add new task -->
+    </div>
+
+    <script>
+        //accessing the target element
+        let h1 = document.getElementById("heading")
+        console.log("h1:", h1.innerHTML);
+
+        //manipulating text content
+        h1.textContent = "DOM Regulation"
+
+        //style
+        h1.style.color = "green"
+        h1.style.fontWeight = "200"
+
+        let desc = document.querySelector(".desc")
+        
+        console.log(desc.innerHTML)
+        desc.style.color = "white"
+        desc.style.backgroundColor = "orange"
+        desc.style.padding = "20px"
+        desc.style.width = "300px"
+        desc.style.borderRadius = "10px"
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANIPULATION</title>
+
+    <style>
+        body{
+            background-color: beige;
+        }
+
+        .card{
+            background-color: white;
+            width: 400px;
+            height: 100px;
+            border-radius: 10px;
+            padding: 10px;
+            color: orangered;
+        }
+
+    </style>
+</head>
+<body>  
+    <h1>DOM Manipulation</h1>    
+    <h4>Using property classList</h4>
+
+    <div class="demoContainer">
+        <p> item1 </p>
+        <!-- TODO : add class ="item2" in below <p> tag -->
+        <p> item2 </p> 
+    </div>
+
+    <script>
+        //access the target element and adding style 
+        let body = document.querySelector("body")
+        document.querySelector("h1").style.color = "orangered"
+        document.querySelector("h4").style.color = "blue"
+
+        //create new element for card
+        let card = document.createElement("div") // <div>  </div>
+        let item1 = document.createElement("p") // <p>   </p>  ------> <p> Name : Nikhil Y </p>
+        let item2 = document.createElement("p") // <p>   </p>  -----> <p> Hobby : Painting </p>
+
+        //add some text content inside
+        item1.textContent = "Name : Nikhil Y"
+        item2.textContent = "Hobby : Painting"
+
+        //appending children in parent Node
+        card.append(item1,item2)
+        body.append(card)
+
+        //adding className to the card div
+        card.classList.add("card") //remove/toggle/replace
+
+        //accessing demoContainer div
+        let demoContainer = document.querySelector(".demoContainer")
+        let lastChild = demoContainer.lastElementChild
+        lastChild.classList.add("item2")
+
+    </script>
+</body>
+</html>

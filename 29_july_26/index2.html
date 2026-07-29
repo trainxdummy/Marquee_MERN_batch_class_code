@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable about me</title>
+</head>
+<body>
+        <h1>About me</h1>
+        <p class="para">I am learing DOM manipulation </p>
+
+        <div>
+            <button id="editBtn">Edit</button>
+            <button id="saveBtn">Save</button>
+        </div>
+
+        <script>
+                function edit(){
+                    para.contentEditable = true;
+                    para.focus()
+                }
+                
+                function save(){
+                    para.contentEditable = false;
+                }
+
+                let para = document.querySelector(".para")
+                let editBtn = document.querySelector("#editBtn")
+                let saveBtn = document.querySelector("#saveBtn")
+
+                editBtn.addEventListener("click",edit )
+                saveBtn.addEventListener("click",save )
+        </script>
+</body>
+</html>

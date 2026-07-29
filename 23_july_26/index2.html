@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANIPULATION</title>
+
+    <style>
+        body{
+            background-color: beige;
+        }
+
+        .card{
+            background-color: white;
+            width: 400px;
+            height: 100px;
+            border-radius: 10px;
+            padding: 10px;
+            color: orangered;
+        }
+
+    </style>
+</head>
+<body>  
+    <h1>DOM Manipulation</h1>    
+    <h4>Using property getAttribute/setAttribute</h4>
+
+    <div id="container" >
+        <p> Random description </p>
+        <p> Random Summary </p> 
+    <div>
+        
+    <!-- js -->
+    <script>
+
+        let containerDiv = document.querySelector("#container")
+        containerDiv.setAttribute("class","container")
+        containerDiv.setAttribute("data-name","nikhil")
+        containerDiv.setAttribute("title","containerDiv")
+
+        console.log(containerDiv.getAttribute("class")) //container
+        console.log(containerDiv.getAttribute("data-name")) //container
+        console.log(containerDiv.getAttribute("id")) //container
+        console.log(containerDiv.getAttribute("title")) //container
+
+    </script>
+</body>
+</html>

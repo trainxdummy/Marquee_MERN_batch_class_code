@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style attribute</title>
+
+    <style>
+        body{
+            background-color: beige;
+        }
+
+        .para {
+            color : red
+        }
+
+        .card{
+            background-color: white;
+            padding: 5px;
+            width: 300px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 id="heading"">DOM Manipulation</h1>
+        <p class="para">Use of style attribute</p>
+    </div>
+
+    <script>
+        let cardDiv = document.querySelector(".card")
+        console.log(cardDiv.classList)
+        cardDiv.classList.add("newCard","newCard2")
+        cardDiv.classList.remove("card")
+        cardDiv.classList.replace("card","play")
+        cardDiv.classList.toggle("outing")
+        
+        cardDiv.className = "newCard3" 
+    </script>
+</body>
+</html>

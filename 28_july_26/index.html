@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .startBtn,.stopBtn,.resumeBtn,.resetBtn {
+            padding: 6px 16px;
+            border-radius: 10px;
+            outline: none;
+            border-style: none;
+        }
+
+        .startBtn{
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+        .stopBtn{
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+        .resetBtn{
+            background-color: slategrey;
+            color: white;
+            cursor: pointer;
+        }
+        .resumeBtn{
+            background-color: rgb(189, 189, 4);
+            color: white;
+            cursor: pointer;
+        }
+
+        h2{
+            font-size: 60px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter App</h1>
+    <h2>0</h2>
+
+    <div>
+        <button class="startBtn">Start</button>
+        <button class="stopBtn">Stop</button>
+        <button class="resumeBtn">Resume</button>
+        <button class="resetBtn">Reset</button>
+    </div>
+
+    <script>
+        let count = 0;
+        let clock = null;
+
+        function updateCount(){
+            let h2 = document.querySelector("h2")
+            h2.innerHTML = count;
+        }
+
+        function start(){
+            clock = setInterval(() => {
+                count++;
+                updateCount()
+            }, 1000)
+        }
+
+        function stop(){
+            console.log("clock stopped...")
+            clearInterval(clock)
+        }
+
+        function reset(){
+            stop()
+            count = 0;
+            updateCount()
+        }
+
+        function resume(){
+            if(clock != null){
+                start()
+            }
+            return count == 0;
+        }
+
+
+        //targeting buttons
+        let startBtn = document.querySelector(".startBtn")
+        let stopBtn = document.querySelector(".stopBtn")
+        let resetBtn = document.querySelector(".resetBtn")
+        let resumeBtn = document.querySelector(".resumeBtn")
+
+        //attaching event listener
+        startBtn.addEventListener("click", start)
+        stopBtn.addEventListener("click", stop)
+        resetBtn.addEventListener("click", reset)
+        resumeBtn.addEventListener("click", resume)
+    </script>
+</body>
+</html>

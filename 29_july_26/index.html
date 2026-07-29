@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <style>
+        body{
+            background-color: rgb(236, 236, 236);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .quote_container{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 600px;
+        }
+
+        #btn{
+            background-color: blue;
+            color: white;
+            padding: 6px 16px;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #quote_author {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="quote_container">
+       <h1>Quote Generator</h1>
+        <p id="quote_text">click the button to generate random quotes</p>
+        <p id="quote_author"></p>
+
+        <button id="btn">  New quote</button>
+   </div>
+
+
+   <script>
+        const quotes = [
+            {text:"A rose by any other name would smell as sweet",author:"William Shakespere"},
+            {text:"I have always depended on the kindness of strangers.",author:"Blanche Dubois"},
+            {text:"A rose by any other name would smell as sweet",author:"William Shakespere"},
+            {text:"I have always depended on the kindness of strangers.",author:"Blanche Dubois"},
+        ]
+
+        //targeting btn
+        let btn = document.querySelector("#btn")
+        let quote_text= document.querySelector("#quote_text")
+        let quote_author = document.querySelector("#quote_author")
+
+        function generateNewQuote(){
+           let randomIdx = Math.floor( Math.random() * quotes.length );
+
+            quote_text.innerText = quotes[randomIdx].text
+            quote_author.innerText =  ` -${quotes[randomIdx].author}`
+        }
+
+        btn.addEventListener("click",generateNewQuote )
+   </script>
+</body>
+</html>

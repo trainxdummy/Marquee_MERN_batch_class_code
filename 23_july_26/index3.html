@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Listeners</title>
+</head>
+<body>
+        <h1>Event Listeners</h1>
+        <button id="btn">Click Me</button>
+        <button id="task-btn">add New Task</button>
+        
+        <script>
+          //accessing the btn
+          let btn = document.querySelector("#btn") 
+          let taskBtn = document.querySelector("#task-btn") 
+          
+          function PrintHello(){
+            alert("Hello guys!")
+          }
+
+          function addNewTask(){
+            let para = document.createElement("p")
+            let task = prompt("Enter task  here")
+            para.innerText = task
+
+            let body = document.querySelector("body")
+            body.append(para)
+          }
+
+          //attaching event listner to the btn
+          btn.addEventListener("click",PrintHello)
+          taskBtn.addEventListener("click",addNewTask)
+          
+        </script>
+</body>
+</html>
