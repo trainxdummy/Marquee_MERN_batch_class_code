@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        body{
+            background-color: black;
+            color : white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading{
+            text-align: center;
+            width: 550px;
+            margin-bottom: 40px;
+        }
+
+        .heading h1{
+            font-size: 45px;
+        }
+
+        .heading span{
+            color : rgb(106, 106, 251)
+        }
+
+        .faq{
+            background-color: rgb(29, 29, 29);
+            padding: 2px 20px;
+            border-radius: 10px;
+            margin: 20px 0px;
+            width: 500px;
+            cursor: pointer;
+        }
+
+        .faq .question{
+            font-size: 18px;
+        }
+        
+        .faq .answer{
+            font-size: 16px;
+            color: rgb(193, 192, 192);
+            display: none;
+        }
+
+        .faq.active .answer{
+            font-size: 16px;
+            color: #c1c0c0;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="heading">
+        <h1>Frequently asked questions</h1>
+        <p>Pay once, build better websites faster. If you don't find what you need here, reach us at <span>support@aceternity.com</span></p>
+   </div>
+    <div class="faq-container">
+        <div class="faq">
+            <p class="question">How does the purchase and access flow work?</p>
+            <p class="answer">Pay once, build better websites faster. If you don't find what you need here, reach us at.</p>
+        </div>
+        <div class="faq">
+            <p class="question">How do I get the code?</p>
+            <p class="answer">Pay once, build better websites faster. If you don't find what you need here, reach us at.</p>
+        </div>
+        <div class="faq">
+            <p class="question">Need help or have a question?</p>
+            <p class="answer">We don’t offer refunds because you get immediate, full access to all code and downloads. Please review our refund policy for details.</p>
+        </div>
+        <div class="faq">
+            <p class="question">Do you offer refunds?</p>
+            <p class="answer">Pay once, build better websites faster. If you don't find what you need here, reach us at.</p>
+        </div>
+    </div>
+
+    <script>
+        let faqs = document.querySelectorAll(".faq")
+
+        faqs.forEach((faq) => {
+            let question = faq.querySelector(".question")
+
+            question.addEventListener("click", () => {
+                faq.classList.toggle("active")
+            })
+        })
+
+    </script>
+</body>
+</html>

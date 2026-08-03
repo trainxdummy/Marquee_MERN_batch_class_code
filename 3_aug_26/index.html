@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+
+        #btn{
+            padding: 10px;
+        }
+
+
+
+       
+
+    </style>
+</head>
+<body>
+    
+
+    <h1>To do list Builder</h1>
+
+    <input type="Enter task" placeholder="Enter task">
+
+    <button id="add">Add</button>
+    <button id="duplicate">Duplicate Last</button>
+    <button id="priority_btn">Insert at top</button>
+
+    <ul class="all_tasks"> </ul>
+
+
+
+    
+    <script>
+        let addBtn = document.querySelector("#add")
+        let duplicatebtn=document.querySelector("#duplicate")
+        let input = document.querySelector("input")
+        let ul = document.querySelector(".all_tasks")
+        let priority_btn = document.querySelector("#priority_btn")
+
+        function createNewTask(){
+            let li = document.createElement("li");
+            li.innerHTML = input.value;
+
+            //#TODO : add delete button
+            let deleteBtn = document.createElement("button")
+            deleteBtn.innerText = "X"
+
+            //#TODO : attach delete functionality
+            deleteBtn.addEventListener("click", () => {
+                deleteBtn.parentElement.remove()
+            })
+
+            li.appendChild(deleteBtn)
+            ul.appendChild(li)  
+
+            input.value = ""
+        }
+
+        
+        function duplicatelast(){
+            let lastElement = ul.lastElementChild;
+            
+            if(lastElement != ''){
+                let clonedTask = lastElement.cloneNode(true) 
+                let deleteBtn = clonedTask.querySelector("button")
+                
+                    deleteBtn.addEventListener("click", () => {
+                        deleteBtn.parentElement.remove()
+                    })
+                    
+                    ul.appendChild(clonedTask)
+                }
+                
+        }
+        
+
+        function insertAtTop(){
+            //hint : (insertBefore("newNode", "existingNode"))
+            let li = document.createElement("li");
+            li.innerHTML = input.value;
+
+            //#TODO : add delete button
+            let deleteBtn = document.createElement("button")
+            deleteBtn.innerText = "X"
+
+            //#TODO : attach delete functionality
+            deleteBtn.addEventListener("click", () => {
+                deleteBtn.parentElement.remove()
+            })
+
+            li.appendChild(deleteBtn)
+            ul.insertBefore(li, ul.firstElementChild)
+            ul.prepend(li)  
+
+            input.value = ""
+
+        }
+
+        //attaching event listeners
+        addBtn.addEventListener("click", createNewTask )
+        duplicatebtn.addEventListener("click",duplicatelast)
+        priority_btn.addEventListener("click", insertAtTop)
+        
+    </script>
+</body>
+</html>
