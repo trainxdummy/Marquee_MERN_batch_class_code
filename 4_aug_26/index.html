@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard controlled counter</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .score{
+            font-size: 50px;
+            font-weight: 900;
+            color: red;
+        }
+
+        .control_btn{
+            padding: 10px 16px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            outline: none;
+            border: none;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Keyboard Controlled counter game</h1>
+    <p>Press A to increase , D to decrease and S to reset </p>
+    <p class="score">0</p>
+
+    <button class="control_btn">Disable Controls</button>
+
+    <script>
+        let count = 0;
+        let isEnabled = true;
+
+        let score = document.querySelector(".score")
+        let control_btn = document.querySelector(".control_btn")
+
+        function counterController(event){
+            if(isEnabled){
+                if(event.key === "a"){
+                    count++;
+                    console.log("updated count:", count)
+                }else if(event.key === "d"){
+                    count--;
+                    console.log("updated count:", count)
+                }else if(event.key === "s"){
+                    count = 0;
+                    console.log("updated count:", count)
+                }
+
+                score.innerHTML = count;
+            }
+        }
+
+        function toggleControl(){
+            isEnabled = !isEnabled
+
+            if(isEnabled){
+                control_btn.textContent = "Disable controls"
+                control_btn.style.backgroundColor = "red"
+            }else{
+                control_btn.textContent = "Enable controls"
+                control_btn.style.backgroundColor = "green"
+            }
+        }
+
+        document.addEventListener("keypress", counterController)
+        control_btn.addEventListener("click", toggleControl)
+    </script>
+</body>
+</html>

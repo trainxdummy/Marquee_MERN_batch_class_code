@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic modal</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button{
+            background-color: rgb(152, 238, 22);
+            color:  white;
+            padding: 12px 26px;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .modal_container{
+            border: 1px solid black;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(51, 51, 51, 0.719);
+            display: none;
+        }
+
+        .modal_content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .modal{
+            background-color: white;
+            padding: 20px 60px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="openBtn">Open modal</button>
+
+    <!-- modal not visible initially -->
+    <div class="modal_container">
+        <div class="modal_content">
+            <div class="modal">
+                <h2>Welcome</h2>
+                <p>Do you really wanna apply?</p>
+                <button id="closeBtn">close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let openBtn = document.querySelector("#openBtn")
+        let closeBtn = document.querySelector("#closeBtn")
+        let modal_container = document.querySelector(".modal_container")
+        let modal_content = document.querySelector(".modal_content")
+        let modal = document.querySelector(".modal")
+
+        openBtn.addEventListener("click", () => {
+            modal_container.style.display = "block"
+        })
+
+        closeBtn.addEventListener("click", () => {
+            modal_container.style.display = "none"
+        })
+
+        document.addEventListener("keydown",(event) => {
+            if(event.key === "Escape"){
+                  modal_container.style.display = "none"
+            }
+        })
+
+        modal_container.addEventListener("click",(event) => {
+          if(event.target === modal_content){
+            modal_container.style.display = "none"
+          }
+        })
+    </script>
+</body>
+</html>

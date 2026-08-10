@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events basic</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            /* background-color: green; */
+            border: 1px solid black;
+            width: 500px;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box.hover{
+            background-color: rgb(228, 228, 253);
+            border: 1px solid blue;
+        }
+
+        .box.clicked{
+            background-color: rgb(147, 255, 147);
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse Events</h1>
+    <div class="box">
+        <p>move, click or db click me!</p>
+    </div>
+
+    <p id="statusText">Status : No event yet</p>
+    <p id="coordinates">Coordinates : -</p>
+
+    <script>
+        let box = document.querySelector(".box")
+        let statusText = document.querySelector("#statusText")
+        let coordinateText = document.querySelector("#coordinates")
+
+        box.addEventListener("mouseover", (event) => {
+            box.classList.add("hover")
+            statusText.textContent = "Status : Mouse is over the box"
+            coordinateText.textContent = `Coordinates : x:${event.clientX}, y: ${event.clientY}`
+        })
+
+        box.addEventListener("mouseleave", (event) => {
+            box.classList.toggle("hover")
+             statusText.textContent = "Status : Mouse left the box"
+             coordinateText.textContent = `Coordinates : x:${event.clientX}, y: ${event.clientY}`
+        })
+
+        box.addEventListener("click", () => {
+            console.log("clicked")
+            box.classList.add("clicked")
+              statusText.textContent = "Status : click event fired!"
+              coordinateText.textContent = `Coordinates : x:${event.clientX}, y: ${event.clientY}`
+        })
+        
+        box.addEventListener("mousedown", () => {
+              statusText.textContent = "Status : mouse button pressed!"
+              coordinateText.textContent = `Coordinates : x:${event.clientX}, y: ${event.clientY}`
+        })
+
+        box.addEventListener("dblclick", ()=> {
+            box.classList.remove("clicked","hover")
+            statusText.textContent = "Status : Style reset!"
+            coordinateText.textContent = `Coordinates : x:${event.clientX}, y: ${event.clientY}`
+        })
+
+    </script>
+</body>
+</html>
