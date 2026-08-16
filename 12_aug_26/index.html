@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic form validation</title>
+    <style>
+        body{
+            background-color: rgb(179, 180, 180);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #form{
+            background-color: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input{
+            border: none;
+            border: 1px solid blue;
+            border-radius: 5px;
+            font-size: 12px;
+            padding: 4px 8px;
+        }
+
+        .field{
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        #submitBtn{
+            margin-top: 4px;
+            cursor: pointer;
+            border: none;
+            background-color: blue;
+            color : white;
+            border-radius: 4px;
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+
+        .error{
+            display: none;
+            color: red;
+            font-size: 10px;
+        }
+
+        .invalid{
+            border : 1px solid red
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form" >
+        <h1>Form Validation</h1>
+        <div class="field">
+            <label for="username"> username</label>
+            <input type="text" name="username" id="username" placeholder="Nikhil Y">
+            <p class="error" id="usernameError"></p>
+        </div>
+        <div class="field">
+            <label for="email"> email</label>
+            <input type="text" name="email" id="email" placeholder="nik@gmail.com">
+            <p  class="error" id="emailError"></p>
+        </div>
+        <div class="field">
+            <label for="password"> password</label>
+            <input type="text" name="password" id="password" placeholder="123***56">
+            <p  class="error" id="passwordError"></p>
+        </div>
+        <button id="submitBtn" type="submit">Register</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
