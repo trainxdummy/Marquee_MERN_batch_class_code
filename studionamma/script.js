@@ -3,16 +3,31 @@ let talk_item = document.querySelector("#talk-item")
 let hero_video_container = document.querySelector(".cursor-follower-video-container")
 let hero_container =  document.querySelector(".hero-container")
 let dark_item = document.querySelector("#dark-mode-item")
+let menubar_overlay_container = document.querySelector(".menubar-overlay-container")
 
 let isDark = false;
 
+
 menu_item.addEventListener("mouseenter",() => {
-    menu_item.textContent = "OPEN"
+    let isMenubarOpen = menubar_overlay_container.classList.contains("show")
+    menu_item.textContent = isMenubarOpen ? "CLOSE" : "OPEN"
 })
 
 menu_item.addEventListener("mouseleave",() => {
-    menu_item.textContent = "MENU"
+    let isMenubarOpen = menubar_overlay_container.classList.contains("show")
+    menu_item.textContent = isMenubarOpen ? "MENU" : "CLOSE"
 })
+
+menu_item.addEventListener("click", () => {
+    menubar_overlay_container.classList.toggle("show")
+    let isMenubarOpen = menubar_overlay_container.classList.contains("show")
+    menu_item.textContent = isMenubarOpen ? "CLOSE" : "OPEN"
+
+    if(!isMenubarOpen){
+        menubar_overlay_container.style.transform = "translateY(-100%)"
+    }
+})
+
 
 talk_item.addEventListener("mouseenter",() => {
     talk_item.textContent = "CONTACT US"
