@@ -18,7 +18,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: mixTape_light;
-    background-color: #E4E4E4;
+    /* background-color: #E4E4E4; */
 }
 
 body{
@@ -109,4 +109,11 @@ body{
     background-color: green;
     overflow: hidden;
     border-radius: 10px;
+}
+
+
+.dark{
+    background-color: black;
+    color: white;
+    transition: all 0.4s ease-in-out;
 }

@@ -2,6 +2,9 @@ let menu_item = document.querySelector("#menu-item")
 let talk_item = document.querySelector("#talk-item")
 let hero_video_container = document.querySelector(".cursor-follower-video-container")
 let hero_container =  document.querySelector(".hero-container")
+let dark_item = document.querySelector("#dark-mode-item")
+
+let isDark = false;
 
 menu_item.addEventListener("mouseenter",() => {
     menu_item.textContent = "OPEN"
@@ -36,4 +39,18 @@ hero_container.addEventListener("mouseleave", (e) => {
     hero_video_container.style.opacity="0" 
 })
 
+
+//DARK MODE LOGIC
+dark_item.addEventListener("click", () => {
+    isDark = !isDark;
+    document.body.classList.add("dark")
+    
+    if(isDark){
+        dark_item.innerHTML = "LIGHT MODE"
+    }else{
+        document.body.classList.remove("dark")
+        dark_item.innerHTML = "DARK MODE"
+    }
+
+})
 
