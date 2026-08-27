@@ -26,6 +26,10 @@ body{
     height: 200vh;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 .nav-container{
     position: fixed;
     width: 100%;

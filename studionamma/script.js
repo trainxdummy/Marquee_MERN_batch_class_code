@@ -19,14 +19,14 @@ menu_item.addEventListener("mouseleave",() => {
 })
 
 menu_item.addEventListener("click", () => {
-    menubar_overlay_container.classList.toggle("show")
-    let isMenubarOpen = menubar_overlay_container.classList.contains("show")
-    menu_item.textContent = isMenubarOpen ? "CLOSE" : "OPEN"
 
-    if(!isMenubarOpen){
-        menubar_overlay_container.style.transform = "translateY(-100%)"
-    }
-})
+    menubar_overlay_container.classList.toggle("show");
+    const isOpen = menubar_overlay_container.classList.contains("show");
+
+    document.body.classList.toggle("menu-open", isOpen);
+    menu_item.textContent = isOpen ? "CLOSE" : "MENU";
+});
+
 
 
 talk_item.addEventListener("mouseenter",() => {
