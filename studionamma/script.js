@@ -156,3 +156,22 @@ triggers.forEach(trigger => {
     });
 
 });
+
+
+// playground section
+
+let playground_section =  document.querySelector(".playground-section")
+let playground_text =  document.querySelector(".playground-text")
+let portfolio =  document.querySelector("#portfolio")
+
+playground_text.addEventListener("mousemove",(e) =>{
+    portfolio.style.top = `${e.clientY}px`
+    portfolio.style.left = `${e.clientX}px`
+    portfolio.style.opacity = "1"
+})
+
+playground_text.addEventListener("mouseleave",(e) =>{
+    portfolio.style.top = `${e.clientY}px`
+    portfolio.style.left = `${e.clientX}px`
+    portfolio.style.opacity = "0"
+})
