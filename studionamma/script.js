@@ -69,3 +69,90 @@ dark_item.addEventListener("click", () => {
 
 })
 
+
+// menubar items mouse hover animation
+let menubar_items =  document.querySelectorAll(".menubar_items")
+
+menubar_items.forEach((menubarItem) =>{
+
+    //mouse enter listener logic
+    menubarItem.addEventListener("mouseenter", () =>{4
+        menubarItem.style.transform = "translateX(50px)"
+        // targeting the img tag
+        let img = menubarItem.parentElement.querySelector("img")
+        img.style.width = "100px"
+    })
+
+    //mouse leave listener logic
+    menubarItem.addEventListener("mouseleave", () =>{4
+        menubarItem.style.transform = "translateX(0)"
+        let img = menubarItem.parentElement.querySelector("img")
+        img.style.width = "0px"
+    })
+})
+
+
+// update time
+
+function updateTime(){
+    let now = new Date();
+    let current_time = document.querySelector("#current_time")
+
+    current_time.textContent = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
+
+}
+
+
+setInterval(()=>{
+    updateTime()
+}, 1000)
+
+
+
+// image stack effect
+
+const triggers = document.querySelectorAll(".hover-trigger");
+
+triggers.forEach(trigger => {
+
+    const images = trigger.querySelectorAll(".stack-image");
+
+    let index = 0;
+    let zIndex = 10;
+    let interval = null;
+
+    trigger.addEventListener("mouseenter", () => {
+
+        if (interval) return;
+
+        interval = setInterval(() => {
+
+            const image = images[index];
+
+            image.style.opacity = "1";
+            image.style.zIndex = zIndex++;
+
+            index++;
+
+            if (index === images.length) {
+                index = 0;
+            }
+
+        }, 300);
+    });
+
+    trigger.addEventListener("mouseleave", () => {
+
+        clearInterval(interval);
+        interval = null;
+
+        images.forEach(image => {
+            image.style.opacity = "0";
+            image.style.zIndex = "1";
+        });
+
+        index = 0;
+        zIndex = 10;
+    });
+
+});
