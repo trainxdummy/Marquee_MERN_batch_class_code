@@ -175,3 +175,27 @@ playground_text.addEventListener("mouseleave",(e) =>{
     portfolio.style.left = `${e.clientX}px`
     portfolio.style.opacity = "0"
 })
+
+
+
+// service section
+
+let service_items = document.querySelectorAll(".service-items")
+let service_img = document.querySelector("#service-img")
+let description_text =  document.querySelector(".description-text")
+
+service_items.forEach(service_item =>{
+    service_item.addEventListener("mouseenter", () =>{
+        
+        service_img.src = service_item.dataset.image
+        description_text.textContent = service_item.dataset.description 
+        service_img.style.opacity = "1"
+        
+    })
+    
+    service_item.addEventListener("mouseleave", () =>{
+        service_img.src = ""
+        description_text.textContent = ""
+        service_img.style.opacity = "0"
+    })
+})
