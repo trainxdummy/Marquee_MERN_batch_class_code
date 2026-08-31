@@ -184,18 +184,25 @@ let service_items = document.querySelectorAll(".service-items")
 let service_img = document.querySelector("#service-img")
 let description_text =  document.querySelector(".description-text")
 
-service_items.forEach(service_item =>{
-    service_item.addEventListener("mouseenter", () =>{
-        
-        service_img.src = service_item.dataset.image
-        description_text.textContent = service_item.dataset.description 
-        service_img.style.opacity = "1"
-        
-    })
-    
-    service_item.addEventListener("mouseleave", () =>{
-        service_img.src = ""
-        description_text.textContent = ""
-        service_img.style.opacity = "0"
-    })
-})
+service_items.forEach(item => {
+
+    item.addEventListener("mouseenter", () => {
+
+        service_img.src = item.dataset.image;
+        description_text.textContent = item.dataset.description;
+
+        const top = item.offsetTop;
+
+        service_img.parentElement.style.top = `${top}px`;
+        description_text.parentElement.style.top = `${top}px`;
+
+        service_img.classList.add("show");
+        description_text.classList.add("show");
+    });
+
+    item.addEventListener("mouseleave", () => {
+        service_img.classList.remove("show");
+        description_text.classList.remove("show");
+    });
+
+});
