@@ -4,6 +4,8 @@ let score = document.querySelector(".score")
 let pipe = document.querySelector(".obstacle")
 let mario = document.querySelector(".mario")
 
+let gameContainerWidth = game_container.offsetWidth;
+
 /** Basic functions : 
      * Jump/fall
 
@@ -24,6 +26,8 @@ let marioPosition = 0;
 function jump(){
     if(isJumping) return;
 
+    isJumping = true;
+
     let startPosition = 0;
     let endPosition = 200;
     let velocity = 8;
@@ -36,6 +40,8 @@ function jump(){
         else{
             clearInterval(jumpInterval);
             fall()
+
+            isJumping = false;
         }  
     },10)
 }
@@ -60,16 +66,23 @@ function fall(){
 
 //moveMario
 function moveMario(direction){
-    let movement = 10;
+    let movement = 20;
     let position;
 
     if(direction === "right"){
         position =  marioPosition + movement ;
-        mario.classList.remove(".flipped")
+        mario.classList.remove("flipped");
     }
-    else if(direction === "left"){
+    else{
         position =  marioPosition - movement ;
-        mario.classList.add("flipped")
+        mario.classList.add("flipped");
+    }
+
+    var maxPosition = gameContainerWidth - mario.offsetWidth;
+
+    if(position >= 0 && position <= maxPosition){
+        marioPosition = position;
+        mario.style.left = marioPosition + "px";
     }
 }
 
@@ -83,41 +96,14 @@ window.addEventListener("keydown", (e)=>{
         case "ArrowLeft" : 
             case "a" :
                 case "A" :
-                isMovingLeft = true;
+                moveMario("left")
                 break;
 
         case "ArrowRight":
             case "d":
                 case "D":
-                    isMovingRight = true;
+                    moveMario("right")
                     break;
     }
 })
 
-window.addEventListener("keyup", (e)=>{
-    switch(e.key){
-        case "ArrowLeft " : 
-            case "a" :
-                case "A" :
-                isMovingLeft = false;
-                break;
-
-        case "ArrowRight":
-            case "d":
-                case "D":
-                    isMovingRight = false;
-                    break;
-    }
-})
-
-
-setInterval(()=>{
-    if(isMovingLeft){
-        moveMario("left")
-        // isMovingLeft = false;
-    }
-    else if(isMovingRight){
-        moveMario("right")
-        // isMovingRight = false;
-    }
-}, 20)
